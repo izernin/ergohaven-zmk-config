@@ -33,6 +33,16 @@
             release-after-ms = <200>;
         };
 
+        cap_sen_v2: cap_sen_v2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CAP_SEN_V2";
+            bindings = <&none>, <&mkp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            hold-while-undecided;
+        };
+
         zip_auto_mouse: zip_auto_mouse {
             compatible = "zmk,input-processor-temp-layer";
             #input-processor-cells = <2>;
@@ -46,10 +56,10 @@
 
         base {
             bindings = <
-&kp RIGHT_BRACKET  &kp Q           &kp W           &kp E        &kp R         &kp T                                &kp Y            &kp U        &kp I        &kp O           &kp P               &kp LEFT_BRACKET
-&kp GRAVE          &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LSHIFT F  &mt LA(LSHFT) G                      &mt LA(RSHFT) H  &mt RSHFT J  &mt RCTRL K  &mt LEFT_ALT L  &mt RIGHT_GUI SEMI  &kp SINGLE_QUOTE
-&kp BACKSLASH      &kp Z           &kp X           &kp C        &kp V         &kp B                                &kp N            &kp M        &kp COMMA    &kp DOT         &kp SLASH           &kp QUESTION
-                                   &none           &none        &kp ESC       &lt 2 BACKSPACE  &kp TAB    &kp RET  &lt 1 SPACE      &mkp LCLK    &none        &none
+&kp RIGHT_BRACKET  &kp Q           &kp W           &kp E        &kp R         &kp T                                &kp Y            &kp U               &kp I        &kp O           &kp P               &kp LEFT_BRACKET
+&kp GRAVE          &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LSHIFT F  &mt LA(LSHFT) G                      &mt LA(RSHFT) H  &mt RSHFT J         &mt RCTRL K  &mt LEFT_ALT L  &mt RIGHT_GUI SEMI  &kp SINGLE_QUOTE
+&kp BACKSLASH      &kp Z           &kp X           &kp C        &kp V         &kp B                                &kp N            &kp M               &kp COMMA    &kp DOT         &kp SLASH           &kp QUESTION
+                                   &none           &none        &kp ESC       &lt 2 BACKSPACE  &kp TAB    &kp RET  &lt 1 SPACE      &cap_sen_v2 0 LCLK  &none        &none
             >;
 
             display-name = "Base";
@@ -60,7 +70,7 @@
 &none  &none     &none      &none           &none      &none                       &none             &none       &none              &none         &none          &none
 &none  &kp LEFT  &kp UP     &kp DOWN_ARROW  &kp RIGHT  &kp CAPS                    &kp RS(LEFT_ALT)  &kp RSHIFT  &kp RIGHT_CONTROL  &kp LEFT_ALT  &kp RIGHT_GUI  &none
 &none  &kp HOME  &kp PG_UP  &kp PAGE_DOWN   &kp END    &kp INS                     &none             &none       &none              &none         &none          &none
-                 &none      &none           &none      &kp DELETE  &none    &none  &trans            &trans      &none              &none
+                 &none      &none           &none      &kp DELETE  &none    &none  &kp SPACE         &trans      &none              &none
             >;
 
             display-name = "Nav";
@@ -71,7 +81,7 @@
 &none  &none         &none         &none             &none           &none                                   &none                  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
 &none  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LA(LEFT_SHIFT)                      &none                  &kp DOLLAR       &kp PRCNT     &kp CARET             &kp UNDER              &none
 &none  &none         &none         &none             &none           &none                                   &kp RIGHT_PARENTHESIS  &kp EXCLAMATION  &kp AT        &kp HASH              &kp PLUS               &none
-                     &none         &none             &none           &trans              &none    &kp EQUAL  &kp MINUS              &none            &none         &none
+                     &none         &none             &none           &trans              &none    &kp EQUAL  &kp MINUS              &trans           &none         &none
             >;
 
             display-name = "Symbols";
