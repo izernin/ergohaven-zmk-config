@@ -49,6 +49,21 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        left_bracket {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <7 8>;
+            layers = <0>;
+        };
+
+        right_bracket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <8 9>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
