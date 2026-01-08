@@ -180,7 +180,7 @@
 &trackball { cpi = <200>; };
 
 &trackball_listener {
-    input-processors = <&zip_xy_scaler 2 1>;
+    input-processors = <&zip_xy_scaler 9 4>;
 
     scroller {
         layers = <5>;
