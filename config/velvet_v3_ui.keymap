@@ -101,11 +101,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LC(SPACE)>,
+                <&kp LCTRL &kp SPACE>,
                 <&macro_tap>,
                 <&kp NUMBER_4>,
                 <&macro_release>,
-                <&kp LC(SPACE)>;
+                <&kp SPACE &kp LCTRL>;
 
             label = "CTRL_SPACE_4";
             wait-ms = <50>;
