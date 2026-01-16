@@ -77,13 +77,15 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LCTRL &kp SPACE>,
+                <&kp LC(SPACE)>,
                 <&macro_tap>,
                 <&kp NUMBER_4>,
                 <&macro_release>,
-                <&kp SPACE &kp LCTRL>;
+                <&kp LC(SPACE)>;
 
             label = "CTRL_SPACE_4";
+            wait-ms = <50>;
+            tap-ms = <50>;
         };
     };
 
