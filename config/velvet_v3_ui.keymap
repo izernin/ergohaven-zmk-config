@@ -69,6 +69,30 @@
             key-positions = <31 32>;
             layers = <0>;
         };
+
+        esc_we {
+            bindings = <&kp ESC>;
+            key-positions = <2 3>;
+            layers = <0>;
+        };
+
+        grave_er {
+            bindings = <&kp GRAVE>;
+            key-positions = <3 4>;
+            layers = <0>;
+        };
+
+        grave_cv {
+            bindings = <&kp GRAVE>;
+            key-positions = <28 27>;
+            layers = <0>;
+        };
+
+        grave_xc {
+            bindings = <&kp GRAVE>;
+            key-positions = <26 27>;
+            layers = <0>;
+        };
     };
 
     macros {
