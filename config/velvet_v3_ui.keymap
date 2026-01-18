@@ -149,6 +149,12 @@
             key-positions = <32 33>;
             layers = <0>;
         };
+
+        quot_kl {
+            bindings = <&kp SINGLE_QUOTE>;
+            key-positions = <20 21>;
+            layers = <0>;
+        };
     };
 
     macros {
