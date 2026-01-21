@@ -95,7 +95,7 @@
         };
 
         lang_change_2 {
-            bindings = <&kp GRAVE>;
+            bindings = <&kp LG(SPACE)>;
             key-positions = <3 4>;
             layers = <0>;
         };
