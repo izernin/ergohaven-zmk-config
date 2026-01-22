@@ -144,7 +144,7 @@
             bindings = <
 &none          &kp Q            &kp W            &kp E         &kp R          &kp T                                               &kp Y             &kp U         &kp I         &kp O            &kp P                &none
 &kp GRAVE      &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LCTRL D  &hml LSHIFT F  &hml LA(LSHFT) G                                    &hmr LA(RSHFT) H  &hmr RSHFT J  &hmr RCTRL K  &hmr LEFT_ALT L  &hmr RIGHT_GUI SEMI  &kp SINGLE_QUOTE
-&kp BACKSLASH  &kp Z            &kp X            &lt 4 C       &kp V          &kp B                                               &kp N             &kp M         &lt 4 COMMA   &kp DOT          &kp SLASH            &kp QUESTION
+&kp BACKSLASH  &lt 9 Z          &kp X            &lt 4 C       &kp V          &kp B                                               &kp N             &kp M         &lt 4 COMMA   &kp DOT          &mt GLOBE SLASH      &kp QUESTION
                                 &none            &none         &lt 7 ESC      &lt_balanced 2 BACKSPACE  &lt 3 TAB    &lt 8 ENTER  &lt 1 SPACE       &none         &none         &none
             >;
 
@@ -153,10 +153,10 @@
 
         nav {
             bindings = <
-&none  &none     &none      &none           &mac_clip  &kp LG(SPACE)                  &none          &none       &none              &none         &none          &none
-&none  &kp LEFT  &kp UP     &kp DOWN_ARROW  &kp RIGHT  &kp CAPS                       &kp LA(RSHFT)  &kp RSHIFT  &kp RIGHT_CONTROL  &kp LEFT_ALT  &kp RIGHT_GUI  &none
-&none  &kp HOME  &kp PG_UP  &kp PAGE_DOWN   &kp END    &kp INS                        &none          &none       &none              &none         &none          &none
-                 &none      &none           &none      &kp DELETE     &none    &none  &trans         &none       &none              &none
+&none  &none     &none      &kp LG(LS(NUMBER_2))  &kp LG(LS(NUMBER_1))  &kp LG(SPACE)                  &none          &none       &none              &none         &none                                 &none
+&none  &kp LEFT  &kp UP     &kp DOWN_ARROW        &kp RIGHT             &kp CAPS                       &kp LA(RSHFT)  &kp RSHIFT  &kp RIGHT_CONTROL  &kp LEFT_ALT  &kp RIGHT_GUI                         &none
+&none  &kp HOME  &kp PG_UP  &kp PAGE_DOWN         &kp END               &kp INS                        &none          &none       &none              &none         &kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT  &none
+                 &none      &none                 &none                 &kp DELETE     &none    &none  &trans         &none       &none              &none
             >;
 
             display-name = "Nav";
@@ -239,6 +239,17 @@
 
             display-name = "User1";
             label = "Function";
+        };
+
+        but {
+            bindings = <
+&none  &none   &none  &none  &none  &none                  &none  &mac_clip  &kp RC(C)  &none  &none  &none
+&none  &none   &none  &none  &none  &none                  &none  &none      &none      &none  &none  &none
+&none  &trans  &none  &none  &none  &none                  &none  &mac_clip  &kp RC(C)  &none  &none  &none
+               &none  &none  &none  &none  &none    &none  &none  &none      &none      &none
+            >;
+
+            label = "Button";
         };
     };
 };
