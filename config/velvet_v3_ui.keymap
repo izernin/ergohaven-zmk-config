@@ -98,15 +98,9 @@
             layers = <0>;
         };
 
-        lang_change {
-            bindings = <&kp LG(SPACE)>;
+        switch_to_en {
+            bindings = <&kp LC(LS(NUMBER_1))>;
             key-positions = <31 32>;
-            layers = <0>;
-        };
-
-        lang_change_2 {
-            bindings = <&kp LG(SPACE)>;
-            key-positions = <3 4>;
             layers = <0>;
         };
 
@@ -126,6 +120,12 @@
             bindings = <&kp SINGLE_QUOTE>;
             key-positions = <32 33>;
             layers = <0>;
+        };
+
+        switch_to_ru {
+            bindings = <&kp LC(LS(NUMBER_2))>;
+            key-positions = <31 32>;
+            layers = <2>;
         };
     };
 
