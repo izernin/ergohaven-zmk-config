@@ -12,24 +12,6 @@
 
 / {
     behaviors {
-        cap_sen: cap_sen {
-            compatible = "zmk,behavior-hold-tap";
-            label = "CAP_SEN";
-            bindings = <&mo>, <&mkp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            hold-while-undecided;
-        };
-
-        mouse_layer: mouse_layer {
-            compatible = "zmk,behavior-sticky-key";
-            label = "MOUSE_LAYER";
-            bindings = <&mo>;
-            #binding-cells = <1>;
-            release-after-ms = <200>;
-        };
-
         lt_balanced: lt_balanced {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_BALANCED";
@@ -100,15 +82,9 @@
             layers = <0>;
         };
 
-        switch_to_en {
+        lang_en {
             bindings = <&kp LC(LS(NUMBER_1))>;
             key-positions = <31 32>;
-            layers = <0>;
-        };
-
-        tab_cv {
-            bindings = <&kp TAB>;
-            key-positions = <28 27>;
             layers = <0>;
         };
 
@@ -124,10 +100,10 @@
             layers = <0>;
         };
 
-        switch_to_ru {
+        lang_ru {
             bindings = <&kp LC(LS(NUMBER_2))>;
-            key-positions = <31 32>;
-            layers = <2>;
+            key-positions = <28 27>;
+            layers = <0>;
         };
     };
 
@@ -155,7 +131,7 @@
         base {
             bindings = <
 &none          &kp Q            &kp W            &kp E         &kp R          &kp T                                               &kp Y             &kp U         &kp I         &kp O                 &kp P                &none
-&kp GRAVE      &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LCTRL D  &hml LSHIFT F  &hml LA(LSHFT) G                                    &hmr LA(RSHFT) H  &hmr RSHFT J  &hmr RCTRL K  &hmr LEFT_ALT L       &hmr RIGHT_GUI SEMI  &kp SINGLE_QUOTE
+&none          &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LCTRL D  &hml LSHIFT F  &hml LA(LSHFT) G                                    &hmr LA(RSHFT) H  &hmr RSHFT J  &hmr RCTRL K  &hmr LEFT_ALT L       &hmr RIGHT_GUI SEMI  &none
 &kp BACKSLASH  &lt 9 Z          &kp X            &lt 4 C       &kp V          &kp B                                               &kp N             &kp M         &lt 4 COMMA   &mt_tap RA(LGUI) DOT  &mt_tap RALT SLASH   &kp QUESTION
                                 &none            &none         &lt 7 ESC      &lt_balanced 2 BACKSPACE  &lt 3 TAB    &lt 8 ENTER  &lt 1 SPACE       &none         &none         &none
             >;
@@ -165,10 +141,10 @@
 
         nav {
             bindings = <
-&none  &none     &none      &kp LS(LC(NUMBER_2))  &kp LS(LC(NUMBER_1))  &kp LG(SPACE)                  &none          &none       &none              &none         &none          &none
-&none  &kp LEFT  &kp UP     &kp DOWN_ARROW        &kp RIGHT             &kp CAPS                       &kp LA(RSHFT)  &kp RSHIFT  &kp RIGHT_CONTROL  &kp LEFT_ALT  &kp RIGHT_GUI  &none
-&none  &kp HOME  &kp PG_UP  &kp PAGE_DOWN         &kp END               &kp INS                        &none          &none       &none              &kp RA(LGUI)  &kp RALT       &none
-                 &none      &none                 &none                 &kp DELETE     &none    &none  &trans         &none       &none              &none
+&none  &none     &none      &none           &none      &none                       &none          &none       &none              &none         &none          &none
+&none  &kp LEFT  &kp UP     &kp DOWN_ARROW  &kp RIGHT  &kp CAPS                    &kp LA(RSHFT)  &kp RSHIFT  &kp RIGHT_CONTROL  &kp LEFT_ALT  &kp RIGHT_GUI  &none
+&none  &kp HOME  &kp PG_UP  &kp PAGE_DOWN   &kp END    &kp INS                     &none          &none       &none              &kp RA(LGUI)  &kp RALT       &none
+                 &none      &none           &none      &kp DELETE  &none    &none  &trans         &none       &none              &none
             >;
 
             display-name = "Nav";
