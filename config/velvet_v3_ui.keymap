@@ -8,8 +8,6 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
-&mt { flavor = "balanced"; };
-
 / {
     behaviors {
         lt_balanced: lt_balanced {
